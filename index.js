@@ -1,14 +1,4 @@
-// const express = require('express');
-// const app = express();
 
-
-// app.get("/" ,function(req, res){
-//    res.send("Hello Express");
-// })
-
-// app.listen(8080, function(){
-//     console.log(`Server run seccess`);
-// })
 
 const express = require('express')
 const app = express();
@@ -35,8 +25,26 @@ app.put("/contact", function(req, res){
 app.get("/redirect", function(req, res){
 
     res.redirect('http://localhost:8080/email')
+})
+
+app.get("/cookie", function(req, res){
+
+    res.cookie('name',"ahad")
+    res.cookie('city',"tngail")
+    res.cookie('age',"23")
+    res.end("i am from cookie")
 
 })
+app.get("/cookies", function(req, res){
+    res.status(201)
+
+    res.clearCookie('name',"ahad")
+    res.clearCookie('city',"tngail")
+    res.clearCookie('age',"23")
+    res.end("i am from remove cookie")
+
+})
+
 
 
 const PORT = 8080;
