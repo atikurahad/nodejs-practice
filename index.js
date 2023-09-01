@@ -1,7 +1,58 @@
-
-
-// const express = require('express')
+// const express = require("express");
 // const app = express();
+// const cookieParser = require("cookie-parser");
+// app.use(cookieParser());
+
+// app.get("/clearcookies", function (req, res) {
+//   res.status(201);
+
+//   res.clearCookie("username", "JohnDoe.");
+//   res.clearCookie("language", "en");
+//   res.end("i am from remove cookie");
+// });
+
+// app.listen(3000, function () {
+//   console.log("Server is listening");
+// });
+
+// app.get("/", function (req, res) {
+//   res.cookie("username", "JohnDoe.");
+//   res.cookie("language", "en");
+//   res.end("i am from set cookie");
+// });
+
+// const PORT = 8080;
+// app.listen(PORT,function(){
+//     console.log(`SERVER RUN SUCCES ${PORT}`)
+// })
+
+// const http = require('http');
+
+// const createServer= ()=>{
+
+// const server = http.createServer((req,res)=>{
+//     res.writeHead(200,{'content-type':'text/plain'});
+//     res.end("Hello This Is Node Js Server!");
+// })
+
+// }
+
+// createServer();
+
+//  const express = require('express');
+//  const app = express();
+
+//  app.post('/',function(req, res){
+//     // res.end("This is POST")
+// let firstName = req.query.firstName;
+// let lastName = req.query.lastName;
+
+//     const userName = req.header("username");
+//     const password = req.header("password");
+
+//     res.end(`username: ${userName} password: ${password}`)
+
+//  } )
 
 // app.get("/", function(req, res){
 //     res.send("Hello there")
@@ -27,61 +78,6 @@
 //     res.redirect('http://localhost:8080/email')
 // })
 
-// app.get("/cookie", function(req, res){
-
-//     res.cookie('name',"ahad")
-//     res.cookie('city',"tngail")
-//     res.cookie('age',"23")
-//     res.end("i am from cookie")
-
-// })
-// app.get("/cookies", function(req, res){
-//     res.status(201)
-
-//     res.clearCookie('name',"ahad")
-//     res.clearCookie('city',"tngail")
-//     res.clearCookie('age',"23")
-//     res.end("i am from remove cookie")
-
-// })
 
 
 
-// const PORT = 8080;
-// app.listen(PORT,function(){
-//     console.log(`SERVER RUN SUCCES ${PORT}`)
-// })
-
-// const http = require('http');
-
-// const createServer= ()=>{
-  
-// const server = http.createServer((req,res)=>{
-//     res.writeHead(200,{'content-type':'text/plain'});
-//     res.end("Hello This Is Node Js Server!");
-// })
-
-
-// }
-
-// createServer();
-
- const express = require('express');
- const app = express();
-
- app.post('/',function(req, res){
-    // res.end("This is POST")
-    // let firstName = req.query.firstName;
-    // let lastName = req.query.lastName;
-
-    const userName = req.header("username");
-    const password = req.header("password");
-    
-    res.end(`username: ${userName} password: ${password}`)
-
- } )
-
-
-app.listen(5500,function(){
-    console.log("Server is listening");
-})
