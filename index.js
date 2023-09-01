@@ -70,9 +70,16 @@
  const app = express();
 
  app.post('/',function(req, res){
-    res.end("This is POST")
- } )
+    // res.end("This is POST")
+    // let firstName = req.query.firstName;
+    // let lastName = req.query.lastName;
 
+    const userName = req.header("username");
+    const password = req.header("password");
+    
+    res.end(`username: ${userName} password: ${password}`)
+
+ } )
 
 
 app.listen(5500,function(){
