@@ -52,18 +52,29 @@
 //     console.log(`SERVER RUN SUCCES ${PORT}`)
 // })
 
-const http = require('http');
+// const http = require('http');
 
-const createServer= ()=>{
+// const createServer= ()=>{
   
-const server = http.createServer((req,res)=>{
-    res.writeHead(200,{'content-type':'text/plain'});
-    res.end("Hello This Is Node Js Server!");
-})
-server.listen(5500,function(){
+// const server = http.createServer((req,res)=>{
+//     res.writeHead(200,{'content-type':'text/plain'});
+//     res.end("Hello This Is Node Js Server!");
+// })
+
+
+// }
+
+// createServer();
+
+ const express = require('express');
+ const app = express();
+
+ app.post('/',function(req, res){
+    res.end("This is POST")
+ } )
+
+
+
+app.listen(5500,function(){
     console.log("Server is listening");
 })
-
-}
-
-createServer();
