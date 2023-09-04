@@ -81,3 +81,50 @@
 
 
 
+// body-parser
+// const express = require('express');
+// const bodyParser = require('body-parser');
+// const multer  = require('multer')
+
+// const app = express()
+// app.use(bodyParser.json())
+// const upload = multer()
+// app.use(upload.array())
+// app.use(express.static('public'))
+
+
+//  app.post("/", function(req, res){
+      
+//     let jsonData = req.body;
+//     let JSONStritng = JSON.stringify(jsonData);
+//     res.send(JSONStritng)
+
+//  })
+//  app.get("/", function(req,res){
+//     res.cookie("name","ahad")
+//     res.cookie("age","34")
+//     res.send(" hi i am from cookie")
+//  })
+//  app.get("/clear", function(req,res){
+//     res.clearCookie("name","ahad")
+//     res.clearCookie("age","34")
+//     res.send(" Hi, i am from clear cookie")
+//  })
+
+
+// app.listen(3000,(()=>{
+//     console.log('App is listening on port 3000')
+// }))
+
+const express = require('express');
+const app = express()
+  
+  app.get('/' ,async(req,res)=>{
+   
+   res.end("Hello i am from get request")
+
+  })
+
+app.listen(8080,()=>{
+   console.log("Server is listening on port 8080");
+})
